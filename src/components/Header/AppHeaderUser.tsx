@@ -11,7 +11,7 @@ import cx from "classnames";
 import { Trans } from "@lingui/macro";
 import NetworkDropdown from "../NetworkDropdown/NetworkDropdown";
 import LanguagePopupHome from "../NetworkDropdown/LanguagePopupHome";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, getChainName } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, KAVA_TESTNET, getChainName } from "config/chains";
 import { switchNetwork } from "lib/wallets";
 import { useChainId } from "lib/chains";
 import { isDevelopment } from "config/env";
@@ -27,34 +27,46 @@ type Props = {
 };
 
 const NETWORK_OPTIONS = [
+  // {
+  //   label: getChainName(ARBITRUM),
+  //   value: ARBITRUM,
+  //   icon: getIcon(ARBITRUM, "network"),
+  //   color: "#264f79",
+  // },
+  // {
+  //   label: getChainName(AVALANCHE),
+  //   value: AVALANCHE,
+  //   icon: getIcon(AVALANCHE, "network"),
+  //   color: "#E841424D",
+  // },
   {
-    label: getChainName(ARBITRUM),
-    value: ARBITRUM,
-    icon: getIcon(ARBITRUM, "network"),
-    color: "#264f79",
-  },
-  {
-    label: getChainName(AVALANCHE),
-    value: AVALANCHE,
-    icon: getIcon(AVALANCHE, "network"),
+    label: getChainName(KAVA_TESTNET),
+    value: KAVA_TESTNET,
+    icon: getIcon(KAVA_TESTNET, "network"),
     color: "#E841424D",
-  },
+  }
 ];
 
-if (isDevelopment()) {
-  NETWORK_OPTIONS.push({
-    label: getChainName(ARBITRUM_TESTNET),
-    value: ARBITRUM_TESTNET,
-    icon: getIcon(ARBITRUM_TESTNET, "network"),
-    color: "#264f79",
-  });
-  NETWORK_OPTIONS.push({
-    label: getChainName(AVALANCHE_FUJI),
-    value: AVALANCHE_FUJI,
-    icon: getIcon(AVALANCHE_FUJI, "network"),
-    color: "#E841424D",
-  });
-}
+// if (isDevelopment()) {
+//   NETWORK_OPTIONS.push({
+//     label: getChainName(ARBITRUM_TESTNET),
+//     value: ARBITRUM_TESTNET,
+//     icon: getIcon(ARBITRUM_TESTNET, "network"),
+//     color: "#264f79",
+//   });
+//   NETWORK_OPTIONS.push({
+//     label: getChainName(AVALANCHE_FUJI),
+//     value: AVALANCHE_FUJI,
+//     icon: getIcon(AVALANCHE_FUJI, "network"),
+//     color: "#E841424D",
+//   });
+//   NETWORK_OPTIONS.push({
+//     label: getChainName(KAVA_TESTNET),
+//     value: KAVA_TESTNET,
+//     icon: getIcon(KAVA_TESTNET, "network"),
+//     color: "#E841424D",
+//   });
+// }
 
 export function AppHeaderUser({
   openSettings,

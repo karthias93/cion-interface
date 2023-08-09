@@ -13,16 +13,18 @@ export const AVALANCHE_FUJI = 43113;
 export const ARBITRUM = 42161;
 export const ARBITRUM_TESTNET = 421611;
 export const FEES_HIGH_BPS = 50;
+export const KAVA_TESTNET = 2221;
 
 // TODO take it from web3
-export const DEFAULT_CHAIN_ID = ARBITRUM;
+export const DEFAULT_CHAIN_ID = KAVA_TESTNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+// export const SUPPORTED_CHAIN_IDS = [KAVA_TESTNET, ARBITRUM, AVALANCHE];
+export const SUPPORTED_CHAIN_IDS = [KAVA_TESTNET];
 
-if (isDevelopment()) {
-  SUPPORTED_CHAIN_IDS.push(ARBITRUM_TESTNET, AVALANCHE_FUJI);
-}
+// if (isDevelopment()) {
+//   SUPPORTED_CHAIN_IDS.push(ARBITRUM_TESTNET, AVALANCHE_FUJI, KAVA_TESTNET);
+// }
 
 export const IS_NETWORK_DISABLED = {
   [ARBITRUM]: false,
@@ -36,6 +38,7 @@ export const CHAIN_NAMES_MAP = {
   [ARBITRUM]: "Arbitrum",
   [AVALANCHE]: "Avalanche",
   [AVALANCHE_FUJI]: "Avalanche Fuji",
+  [KAVA_TESTNET]: "Kava EVM Testnet",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
@@ -63,6 +66,14 @@ const constants = {
 
   [TESTNET]: {
     nativeTokenSymbol: "BNB",
+    defaultCollateralSymbol: "BUSD",
+    defaultFlagOrdersEnabled: true,
+    positionReaderPropsLength: 8,
+    v2: false,
+  },
+
+  [KAVA_TESTNET]: {
+    nativeTokenSymbol: "TKAVA",
     defaultCollateralSymbol: "BUSD",
     defaultFlagOrdersEnabled: true,
     positionReaderPropsLength: 8,
@@ -149,6 +160,7 @@ export const RPC_PROVIDERS = {
   [ARBITRUM_TESTNET]: ["https://rinkeby.arbitrum.io/rpc"],
   [AVALANCHE]: ["https://api.avax.network/ext/bc/C/rpc"],
   [AVALANCHE_FUJI]: ["https://api.avax-test.network/ext/bc/C/rpc"],
+  [KAVA_TESTNET]: ["https://evm.testnet.kava.io/"],
 };
 
 export const FALLBACK_PROVIDERS = {
@@ -223,6 +235,17 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     rpcUrls: RPC_PROVIDERS[AVALANCHE_FUJI],
     blockExplorerUrls: [getExplorerUrl(AVALANCHE_FUJI)],
   },
+  [KAVA_TESTNET]: {
+    chainId: "0x" + KAVA_TESTNET.toString(16),
+    chainName: "Kava EVM Testnet",
+    nativeCurrency: {
+      name: "TKAVA",
+      symbol: "TKAVA",
+      decimals: 18,
+    },
+    rpcUrls: RPC_PROVIDERS[KAVA_TESTNET],
+    blockExplorerUrls: [getExplorerUrl(KAVA_TESTNET)],
+  },
 };
 
 export const getConstant = (chainId: number, key: string) => {
@@ -284,6 +307,8 @@ export function getExplorerUrl(chainId) {
     return "https://snowtrace.io/";
   } else if (chainId === AVALANCHE_FUJI) {
     return "https://testnet.snowtrace.io/";
+  } else if (chainId === KAVA_TESTNET) {
+    return "https://explorer.testnet.kava.io/";
   }
   return "https://etherscan.io/";
 }

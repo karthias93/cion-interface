@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, MAINNET, TESTNET } from "./chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, KAVA_TESTNET, MAINNET, TESTNET } from "./chains";
 
 const { AddressZero } = ethers.constants;
 
@@ -168,7 +168,7 @@ const CONTRACTS = {
     Reader: "0x2eFEE1950ededC65De687b40Fd30a7B5f4544aBd",
     GlpManager: "0xD152c7F25db7F4B95b7658323c5F33d176818EE4",
     RewardRouter: "0x82147C5A7E850eA4E28155DF107F2590fD4ba327",
-    GlpRewardRouter: "0xB70B91CE0771d3f4c81D87660f71Da31d48eB3B3",
+    GlpRewardRouter: "0xB70B91CE0771d3f4c81D87660f71Da31d48eB3B3", 
     RewardReader: "0x04Fc11Bd28763872d143637a7c768bD96E44c1b6",
     NATIVE_TOKEN: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
     GLP: "0x01234181085565ed162a948b6a5e88758CD7c7b8",
@@ -244,6 +244,51 @@ const CONTRACTS = {
     TraderJoeGmxAvaxPool: AddressZero,
     ReferralStorage: AddressZero,
     ReferralReader: AddressZero,
+  },
+  [KAVA_TESTNET]: {
+    // KAVA testnet
+    Vault: "0xA66334B71cf4aaD294D29AAd538EC7e576E67dee",
+    Router: "0xE30F97F5AF7C444fD1187A2a1decdC5b75bA7008",
+    VaultReader: "0x3860F745A23843161f4F65d003D868B4b6D5105A",
+    Reader: "0x0e98620dEa1604a6b27D83a2cbdA624A51249222",
+    GlpManager: "0x36694865C005cEd386E6DC78C7809cF4F21eC19C",
+    RewardRouter: "0x026D02b3b66A25f6D2767A7E2f7E188AEc480275",
+    GlpRewardRouter: "0x026D02b3b66A25f6D2767A7E2f7E188AEc480275", // need to update
+    RewardReader: "0xa54532866E6Ca3E61852Bbb68bcF2FD7932C279f",
+    NATIVE_TOKEN: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7", // need to update
+    GLP: "0x19C988e3F2857c94Edef754687CDaEc4EA4b8146",
+    GMX: "0xd912629478109A9c64a96F5E506fC2f9c0E0D69e",
+    ES_GMX: "0x10Ea62Aa5Da89B3B91560D232fcFbDFD50E89421",
+    BN_GMX: "0x8087a341D32D445d9aC8aCc9c14F5781E04A26d2", // need to update
+    USDG: "0xb8ACF76DE1818A3C4F98236b640c94C84030115E",
+    ES_GMX_IOU: "0x6260101218eC4cCfFF1b778936C6f2400f95A954", // placeholder address // need to update
+
+    StakedGmxTracker: "0x2bD10f8E93B3669b6d42E74eEedC65dd1B0a1342", // need to update
+    BonusGmxTracker: "0x908C4D94D34924765f1eDc22A1DD098397c59dD4", // need to update
+    FeeGmxTracker: "0x4d268a7d4C16ceB5a606c173Bd974984343fea13", // need to update
+    StakedGlpTracker: "0x9e295B5B976a184B14aD8cd72413aD846C299660", // need to update
+    FeeGlpTracker: "0xd2D1162512F927a7e282Ef43a362659E4F2a728F", // need to update
+
+    StakedGmxDistributor: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a", // need to update
+    StakedGlpDistributor: "0xDd593Cf40734199afc9207eBe9ffF23dA4Bf7720", // need to update
+
+    GmxVester: "0xFdC6C66eF66a9121BE5B6aCcfdc3BE81d86f5852",
+    GlpVester: "0xeDf0dE2dbCE3eB85430d49B3d907e39E070d2872",
+
+    OrderBook: "0xDa6F56C0008263B9Bb7D89e5eC20248cC634Cf6D",
+    OrderExecutor: "0x5b012b2e29D3d39b34a73eA7C955941FFaDe563C",
+    OrderBookReader: "0x67555701e76a6AebfdDE0645B124aa4ae1342bEF",
+
+    PositionRouter: "0xAcFA4ED5EBdA687F5B3F9cAc872B285b153dB7B1",
+    PositionManager: "0xE86EAa11a9866f679893c0Dbad264C19d6fD7425",
+
+    TraderJoeGmxAvaxPool: "0x0c91a070f862666bbcce281346be45766d874d98", // need to update
+    ReferralStorage: "0x898E743348A2FD29AbC7674e46c241Babd101BAB",
+    ReferralReader: "0x6a3f58694032CB22813e45D8cBbCBb267a554615",
+
+    Timelock: "0x8A68a039D555599Fd745f9343e8dE20C9eaFca75", // need to update
+
+    Multicall: "0xcA11bde05977b3631167028862bE2a173976CA11", // need to update
   },
 };
 

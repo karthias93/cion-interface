@@ -1,9 +1,10 @@
 import useSWR from "swr";
 import { arrayURLFetcher, getTotalVolumeSum } from "lib/legacy";
-import { ARBITRUM, AVALANCHE } from "config/chains";
+import { ARBITRUM, AVALANCHE, KAVA_TESTNET } from "config/chains";
 import { getServerUrl } from "config/backend";
 import { bigNumberify } from "lib/numbers";
-const ACTIVE_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+// const ACTIVE_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+const ACTIVE_CHAIN_IDS = [KAVA_TESTNET];
 
 export function useTotalVolume() {
   const { data: totalVolume } = useSWR<any>(

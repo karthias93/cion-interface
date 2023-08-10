@@ -1,9 +1,15 @@
-import { ARBITRUM, AVALANCHE, ETH_MAINNET } from "./chains";
+import { ARBITRUM, AVALANCHE, ETH_MAINNET, KAVA_TESTNET } from "./chains";
 import { isDevelopment } from "./env";
 import { getSubgraphUrlKey } from "./localStorage";
 
 const SUBGRAPH_URLS = {
   [ARBITRUM]: {
+    stats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-stats/api",
+    referrals: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-referrals/api",
+    nissohVault: "https://api.thegraph.com/subgraphs/name/nissoh/gmx-vault",
+  },
+
+  [KAVA_TESTNET]: {
     stats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-stats/api",
     referrals: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-referrals/api",
     nissohVault: "https://api.thegraph.com/subgraphs/name/nissoh/gmx-vault",

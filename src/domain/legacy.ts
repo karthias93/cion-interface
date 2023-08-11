@@ -15,7 +15,7 @@ import Token from "abis/Token.json";
 import PositionRouter from "abis/PositionRouter.json";
 
 import { getContract } from "config/contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, getConstant, getHighExecutionFee } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, KAVA_TESTNET, getConstant, getHighExecutionFee } from "config/chains";
 import { DECREASE, getOrderKey, INCREASE, SWAP, USD_DECIMALS } from "lib/legacy";
 
 import { groupBy } from "lodash";
@@ -353,13 +353,13 @@ export function useTrades(chainId, account, forSingleAccount, afterId) {
 }
 
 export function useExecutionFee(library, active, chainId, infoTokens) {
+  // console.log(chainId, '------c-----')
   const positionRouterAddress = getContract(chainId, "PositionRouter");
   const nativeTokenAddress = getContract(chainId, "NATIVE_TOKEN");
 
   const { data: minExecutionFee } = useSWR<BigNumber>([active, chainId, positionRouterAddress, "minExecutionFee"], {
     fetcher: contractFetcher(library, PositionRouter),
   });
-
   const { data: gasPrice } = useSWR<BigNumber | undefined>(["gasPrice", chainId], {
     fetcher: () => {
       return new Promise(async (resolve, reject) => {
@@ -371,8 +371,10 @@ export function useExecutionFee(library, active, chainId, infoTokens) {
 
         try {
           const gasPrice = await provider.getGasPrice();
+          console.log(gasPrice, '------gggg------')
           resolve(gasPrice);
         } catch (e) {
+          console.log(e, '------gas error------')
           // eslint-disable-next-line no-console
           console.error(e);
         }
@@ -391,9 +393,13 @@ export function useExecutionFee(library, active, chainId, infoTokens) {
     multiplier = 700000;
   }
 
+  if (chainId === KAVA_TESTNET) {
+    multiplier = 700000;
+  }
   let finalExecutionFee = minExecutionFee;
 
   if (gasPrice && minExecutionFee) {
+    console.log(gasPrice, '------gas----')
     const estimatedExecutionFee = gasPrice.mul(multiplier);
     if (estimatedExecutionFee.gt(minExecutionFee)) {
       finalExecutionFee = estimatedExecutionFee;

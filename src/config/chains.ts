@@ -74,10 +74,15 @@ const constants = {
 
   [KAVA_TESTNET]: {
     nativeTokenSymbol: "TKAVA",
-    defaultCollateralSymbol: "BUSD",
+    defaultCollateralSymbol: "USDC",
     defaultFlagOrdersEnabled: true,
     positionReaderPropsLength: 8,
     v2: false,
+
+    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.01"),
+    // contract requires that execution fee be strictly greater than instead of gte
+    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
   },
 
   [ARBITRUM_TESTNET]: {

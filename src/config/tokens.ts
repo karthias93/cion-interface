@@ -382,89 +382,98 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
     },
     {
-      name: "Wrapped Ethereum",
-      symbol: "WETH",
+      name: "Wrapped KAVA",
+      symbol: "WKAVA",
       decimals: 18,
-      address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      address: "0xFa95D53e0B6e82b2137Faa70FD7E4a4DC70Da449",
       isWrapped: true,
-      baseSymbol: "ETH",
-      imageUrl: "https://assets.coingecko.com/coins/images/2518/thumb/weth.png?1628852295",
+      baseSymbol: "AVAX",
+      imageUrl: "https://assets.coingecko.com/coins/images/12559/small/coin-round-red.png?1604021818",
     },
-    {
-      name: "Bitcoin (WBTC)",
-      symbol: "BTC",
-      decimals: 8,
-      address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
-      isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
-    },
-    {
-      name: "Chainlink",
-      symbol: "LINK",
-      decimals: 18,
-      address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
-      isStable: false,
-      isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700",
-    },
-    {
-      name: "Uniswap",
-      symbol: "UNI",
-      decimals: 18,
-      address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
-      isStable: false,
-      isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/12504/thumb/uniswap-uni.png?1600306604",
-    },
-    {
-      name: "Bridged USDC (USDC.e)",
-      symbol: "USDC.e",
-      decimals: 6,
-      address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-      isStable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
-    },
+    // {
+    //   name: "Wrapped Ethereum",
+    //   symbol: "WETH",
+    //   decimals: 18,
+    //   address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+    //   isWrapped: true,
+    //   baseSymbol: "ETH",
+    //   imageUrl: "https://assets.coingecko.com/coins/images/2518/thumb/weth.png?1628852295",
+    // },
+    // {
+    //   name: "Bitcoin (WBTC)",
+    //   symbol: "BTC",
+    //   decimals: 8,
+    //   address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+    //   isShortable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744",
+    // },
+    // {
+    //   name: "Chainlink",
+    //   symbol: "LINK",
+    //   decimals: 18,
+    //   address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
+    //   isStable: false,
+    //   isShortable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1547034700",
+    // },
+    // {
+    //   name: "Uniswap",
+    //   symbol: "UNI",
+    //   decimals: 18,
+    //   address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+    //   isStable: false,
+    //   isShortable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/12504/thumb/uniswap-uni.png?1600306604",
+    // },
+    // {
+    //   name: "Bridged USDC (USDC.e)",
+    //   symbol: "USDC.e",
+    //   decimals: 6,
+    //   address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+    //   isStable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
+    // },
     {
       name: "USD Coin",
       symbol: "USDC",
       decimals: 6,
-      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      address: "0x43D8814FdFB9B8854422Df13F1c66e34E4fa91fD",
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
-    {
-      name: "Tether",
-      symbol: "USDT",
-      decimals: 6,
-      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      isStable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/325/thumb/Tether-logo.png?1598003707",
-    },
-    {
-      name: "Dai",
-      symbol: "DAI",
-      decimals: 18,
-      address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-      isStable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734",
-    },
-    {
-      name: "Frax",
-      symbol: "FRAX",
-      decimals: 18,
-      address: "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
-      isStable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/13422/small/frax_logo.png?1608476506",
-    },
-    {
-      name: "Magic Internet Money",
-      symbol: "MIM",
-      decimals: 18,
-      address: "0xFEa7a6a0B346362BF88A9e4A88416B77a57D6c2A",
-      isStable: true,
-      isTempHidden: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/16786/small/mimlogopng.png",
-    },
+    // {
+    //   name: "Tether",
+    //   symbol: "USDT",
+    //   decimals: 6,
+    //   address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+    //   isStable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/325/thumb/Tether-logo.png?1598003707",
+    // },
+    // {
+    //   name: "Dai",
+    //   symbol: "DAI",
+    //   decimals: 18,
+    //   address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+    //   isStable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/9956/thumb/4943.png?1636636734",
+    // },
+    // {
+    //   name: "Frax",
+    //   symbol: "FRAX",
+    //   decimals: 18,
+    //   address: "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
+    //   isStable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/13422/small/frax_logo.png?1608476506",
+    // },
+    // {
+    //   name: "Magic Internet Money",
+    //   symbol: "MIM",
+    //   decimals: 18,
+    //   address: "0xFEa7a6a0B346362BF88A9e4A88416B77a57D6c2A",
+    //   isStable: true,
+    //   isTempHidden: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/16786/small/mimlogopng.png",
+    // },
   ],
 };
 
@@ -732,7 +741,8 @@ export const TOKENS_BY_SYMBOL_MAP: { [chainId: number]: { [symbol: string]: Toke
 export const WRAPPED_TOKENS_MAP: { [chainId: number]: Token } = {};
 export const NATIVE_TOKENS_MAP: { [chainId: number]: Token } = {};
 
-const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, KAVA_TESTNET];
+// const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, AVALANCHE_FUJI, KAVA_TESTNET];
+const CHAIN_IDS = [KAVA_TESTNET];
 
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];
@@ -742,7 +752,7 @@ for (let j = 0; j < CHAIN_IDS.length; j++) {
   if (ADDITIONAL_TOKENS[chainId]) {
     tokens = tokens.concat(ADDITIONAL_TOKENS[chainId]);
   }
-
+  console.log(tokens, '-----tokens-----')
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
     TOKENS_MAP[chainId][token.address] = token;

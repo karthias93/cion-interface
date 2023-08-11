@@ -10,9 +10,8 @@ const SUBGRAPH_URLS = {
   },
 
   [KAVA_TESTNET]: {
-    stats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-stats/api",
-    referrals: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-referrals/api",
-    nissohVault: "https://api.thegraph.com/subgraphs/name/nissoh/gmx-vault",
+    stats: "https://the-graph.testnet.kava.io/subgraphs/name/cion0x/cion-stat/graphql",
+    referrals: "https://the-graph.testnet.kava.io/subgraphs/name/cion0x/cion-referal/graphql",
   },
 
   [AVALANCHE]: {

@@ -1,0 +1,259 @@
+.landing-page {
+
+    .py-75px {
+        padding: 75px 0;
+    }
+
+    .main-sec {
+        padding: 75px 0;
+
+        .bg-icons {
+            img {
+                position: absolute;
+                height: 50px;
+            }
+
+            .li1 {
+                top: 2%;
+                left: 6%;
+            }
+
+            .li2 {
+                top: 2.5%;
+                left: 18%;
+            }
+
+            .li3 {
+                top: 5%;
+                left: 9%;
+            }
+
+            .li4 {
+                top: 10%;
+                left: 6%;
+            }
+
+            .ri1 {
+                top: 2%;
+                right: 6%;
+            }
+
+            .ri2 {
+                top: 5%;
+                right: 14%;
+            }
+
+            .ri3 {
+                top: 10%;
+                right: 9%;
+            }
+
+            .ri4 {
+                top: 18%;
+                right: 2%;
+                height: 26px;
+            }
+        }
+
+        .start-btn {
+            padding: 10px 35px;
+            background-color: #FF564F;
+            border-radius: 12px;
+            border: none;
+        }
+
+        h1 {
+            span {
+
+                background: -webkit-linear-gradient(180deg, #fff, #FF564F);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+        }
+    }
+
+    .widget-sec {
+        padding: 75px 0;
+
+        .w-220px {
+            width: 220px;
+        }
+
+        &-card {
+            background-color: #FFFFFF1A;
+            padding: 15px;
+            border-radius: 15px;
+
+            img {
+                height: 55px;
+            }
+        }
+    }
+
+    .grade-card-sec {
+        padding: 75px 0;
+    }
+
+    .breaking-sec {
+        padding: 75px 0;
+
+        &-card {
+            background: linear-gradient(180deg, #3B3B3B40, #3B3B3B00);
+            padding: 30px;
+            border-radius: 5px;
+            border-top: 8px solid #844EF880;
+            height: 100%;
+
+            img {}
+        }
+    }
+
+    .optimize-sec {
+        padding: 75px 0;
+
+        &-card {
+            padding: 1px;
+            border-radius: 15px;
+            padding: 15px;
+            background: linear-gradient(#120f18, #120f18) padding-box,
+                linear-gradient(to right, darkblue, darkorchid) border-box;
+            border-radius: 15px;
+            border: 1px solid transparent;
+
+            img {
+                height: 30px;
+            }
+
+            .br-gray {
+                border-right: 1px solid #FFFFFF1A;
+            }
+        }
+    }
+
+    .available-sec {
+        padding: 75px 0;
+
+        &-card {
+            padding: 30px;
+            background-color: #844EF81A;
+            border-radius: 15px;
+
+            img {
+                height: 120px;
+                float: right;
+                margin: -83px -97px 0px 0px;
+            }
+
+            button {
+                width: 100%;
+                padding: 8px;
+                border-radius: 8px;
+                background-color: #A37AFA;
+                border: none;
+            }
+        }
+
+        .orange-card {
+            background-color: #BF403B26;
+
+            button {
+                background-color: #FF564F;
+            }
+        }
+    }
+
+
+    .eco-sec {
+        padding: 75px 0;
+
+        &-card {
+            background-color: #151928;
+            padding: 30px;
+            border-radius: 20px;
+
+            button {
+                padding: 5px;
+                border-radius: 5px;
+                width: 100%;
+                border: none;
+                color: #fff;
+                border: 1px solid #FFFFFF1A;
+                font-size: 14px;
+
+                &.buy-btn {
+                    background-color: #FF564F;
+                }
+
+                &.read-more-btn {
+                    background-color: #0000;
+                }
+            }
+
+            .table-design {
+                border-radius: 15px;
+                border: 1px solid #FFFFFF1A;
+
+                &-head {
+                    padding: 15px;
+                    border-bottom: 1px solid #FFFFFF1A;
+
+                    img {
+                        height: 36px;
+                    }
+                }
+
+                &-body {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+    .partner-sec {
+        padding: 75px 0;
+        .w-220px {
+            width: 220px;
+        }
+    }
+
+    .mum-footer {
+        padding: 30px 0;
+        background-color: #191B2E;
+
+        img {
+            height: 30px;
+        }
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .py-75px {
+        padding: 50px 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .f-72 {
+        font-size: 52px;
+    }
+
+    .f-56 {
+        font-size: 36px;
+    }
+
+    .f-24 {
+        font-size: 16px;
+    }
+
+    .f-16 {
+        font-size: 14px;
+    }
+    .available-sec-card{
+        margin-bottom: 40px;
+    }
+}

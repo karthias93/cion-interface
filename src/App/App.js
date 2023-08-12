@@ -102,6 +102,7 @@ import ExternalLink from "components/ExternalLink/ExternalLink";
 import { isDevelopment } from "config/env";
 import Button from "components/Button/Button";
 import { roundToTwoDecimals } from "lib/numbers";
+import LandingPage from "pages/LandingPage/LandingPage";
 
 if (window?.ethereum?.autoRefreshOnNetworkChange) {
   window.ethereum.autoRefreshOnNetworkChange = false;
@@ -465,7 +466,7 @@ function FullApp() {
           {!isHome && (
             <Switch>
               <Route exact path="/">
-                <Redirect to="/dashboard" />
+                <Redirect to="/landing-page" />
               </Route>
               <Route exact path="/trade">
                 <Exchange
@@ -485,6 +486,9 @@ function FullApp() {
               </Route>
               <Route exact path="/dashboard">
                 <Dashboard />
+              </Route>
+              <Route exact path="/landing-page">
+                <LandingPage />
               </Route>
               <Route exact path="/earn">
                 <Stake setPendingTxns={setPendingTxns} connectWallet={connectWallet} />

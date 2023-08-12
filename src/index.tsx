@@ -4,6 +4,7 @@ import "regenerator-runtime/runtime";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App/App";
 import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
   <React.StrictMode>

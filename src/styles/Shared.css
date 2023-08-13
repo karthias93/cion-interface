@@ -11,6 +11,7 @@ body,
   font-size: 10px;
   /* background-color: var(--main-bg-color); */
   background: linear-gradient(0deg, #352D46, #000000);
+  
 }
 
 body {
@@ -479,6 +480,10 @@ button.btn-link:hover .logout-icon {
   color: rgb(243, 181, 12);
 }
 
+.fw-400 {
+  font-weight: 400;
+}
+
 .ml-xs {
   margin-left: 0.5rem;
 }
@@ -511,6 +516,10 @@ button.btn-link:hover .logout-icon {
   font-size: 15px;
 }
 
+.f-14 {
+  font-size: 14px;
+}
+
 .t-gray {
   color: #FFFFFF99 !important;
 }
@@ -523,3 +532,7 @@ button.btn-link:hover .logout-icon {
   color: #FF564F;
 }
 
+.t-green {
+  color: #34f5ae;
+
+}

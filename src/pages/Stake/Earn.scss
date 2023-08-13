@@ -1,0 +1,46 @@
+.earn-page {
+    padding: 40px 0;
+    background: linear-gradient(180deg, #0C1123 0%, #04050B 100%);
+
+    &-sidebar {
+        &-menu {
+            .icon {
+                height: 24px;
+            }
+        }
+    }
+
+    &-overview {
+        &-card {
+            padding: 18px;
+            border-radius: 15px;
+            background: linear-gradient(136.05deg, rgba(255, 86, 79, 0.16) 0%, rgba(25, 27, 46, 0.16) 101.88%);
+
+            .icon {
+                height: 55px;
+            }
+
+            button {
+                background: rgba(255, 86, 79, 1);
+                padding: 8px 16px;
+                border-radius: 8px;
+                color: #fff;
+                width: 100%;
+            }
+        }
+
+        &-mini-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+
+            button {
+                padding: 8px 12px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                background-color: #0000;
+                color: #fff;
+            }
+        }
+    }
+}

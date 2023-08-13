@@ -1,0 +1,110 @@
+.dashobard-page {
+    .py-75px {
+        padding: 75px 0;
+    }
+
+    .main-sec {
+        background-image: url("../../img/new/dbg.png");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        padding: 40px 0;
+
+        &-card {
+            background: linear-gradient(138.78deg, rgba(193, 166, 251, 0.008) -4.21%, rgba(25, 27, 46, 0.64) 104.28%);
+            padding: 30px;
+            border-radius: 15px;
+
+            .st-icon {
+                height: 60px;
+            }
+        }
+    }
+
+    .token-sec {
+        padding: 40px 0;
+
+        &-card {
+            padding: 30px;
+            background: linear-gradient(180deg, rgba(193, 166, 251, 0.8) -188.29%, rgba(193, 166, 251, 0) 114.15%);
+            border-radius: 12px;
+
+            .to-head-icon {
+                height: 80px;
+            }
+
+            .mtn-30 {
+                margin-top: -30px;
+            }
+
+            button {
+                border: 1px solid #FFFFFF1A;
+                color: #fff;
+                background: #0000;
+                padding: 8px 15px;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .bg-gard-red {
+                background: linear-gradient(90deg, rgba(255, 4, 32, 0.1) 0%, rgba(255, 4, 32, 0) 100%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+
+            }
+
+            &-list {
+                border-radius: 15px;
+                overflow: hidden;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+                &-item {
+                    padding: 15px;
+                    background: linear-gradient(90deg, rgba(19, 181, 236, 0.1) 0%, rgba(19, 181, 236, 0) 100%);
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+                    &icon {
+                        height: 24px;
+                    }
+
+                    button {
+                        background: rgba(255, 86, 79, 1);
+                        padding: 8px 15px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .market-sec {
+        padding: 40px 0;
+
+        &-table {
+            table {
+                width: 100%;
+                border-collapse: inherit;
+                border-spacing: 0px 15px;
+            }
+
+            th,
+            td {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            th {
+                font-weight: 400;
+                color: #FFFFFF99 !important;
+                padding: 0px 15px;
+            }
+
+            td {
+                background-color: rgba(33, 35, 51, 1);
+                .t-icon{
+                    height: 35px;
+                }
+            }
+        }
+
+    }
+}

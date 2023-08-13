@@ -45,6 +45,7 @@ import Ri1 from "../../img/new/ri1.png";
 import Ri2 from "../../img/new/ri2.png";
 import Ri3 from "../../img/new/ri3.png";
 import Ri4 from "../../img/new/ri4.png";
+import CFooter from "components/NewFooter/Footer";
 
 function LandingPage(props) {
   return (
@@ -577,23 +578,7 @@ function LandingPage(props) {
         </div>
       </div>
 
-      <div className="mum-footer text-center">
-        <div className="f-16 mb-3">Join our community</div>
-        <div className="d-flex gap-5 justify-content-center">
-          <div>
-            <img src={So1} />
-          </div>
-          <div>
-            <img src={So2} />
-          </div>
-          <div>
-            <img src={So3} />
-          </div>
-          <div>
-            <img src={So4} />
-          </div>
-        </div>
-      </div>
+      <CFooter />
     </div>
   );
 }

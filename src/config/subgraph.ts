@@ -10,8 +10,8 @@ const SUBGRAPH_URLS = {
   },
 
   [KAVA_TESTNET]: {
-    stats: "https://the-graph.testnet.kava.io/subgraphs/name/cion0x/cion-stat/graphql",
-    referrals: "https://the-graph.testnet.kava.io/subgraphs/name/cion0x/cion-referal/graphql",
+    stats: "https://the-graph.testnet.kava.io/subgraphs/name/cion0x/cion-stat",
+    referrals: "https://the-graph.testnet.kava.io/subgraphs/name/cion0x/cion-referal",
   },
 
   [AVALANCHE]: {

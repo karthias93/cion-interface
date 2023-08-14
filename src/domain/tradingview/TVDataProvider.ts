@@ -49,6 +49,7 @@ export class TVDataProvider {
   }
 
   async getLimitBars(chainId: number, ticker: string, period: string, limit: number): Promise<Bar[]> {
+    console.log(ticker, '----limit bar----')
     const prices = await getLimitChartPricesFromStats(chainId, ticker, period, limit);
     return prices;
   }

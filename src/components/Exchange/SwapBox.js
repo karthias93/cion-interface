@@ -812,6 +812,7 @@ export default function SwapBox(props) {
     }
 
     const fromTokenInfo = getTokenInfo(infoTokens, fromTokenAddress);
+    console.log(fromTokenInfo, '-----from token info----')
     if (
       !savedShouldDisableValidationForTesting &&
       fromTokenInfo &&

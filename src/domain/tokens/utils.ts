@@ -111,6 +111,7 @@ export function getTokenInfo(
   replaceNative?: boolean,
   nativeTokenAddress?: string
 ) {
+  console.log(infoTokens, '-----info---', tokenAddress)
   if (replaceNative && tokenAddress === nativeTokenAddress) {
     return infoTokens[AddressZero];
   }

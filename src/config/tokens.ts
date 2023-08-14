@@ -816,6 +816,7 @@ export function getVisibleTokens(chainId: number) {
 }
 
 export function getNormalizedTokenSymbol(tokenSymbol) {
+  console.log(tokenSymbol, '------token symbol------')
   if (["WBTC", "WETH", "WAVAX"].includes(tokenSymbol)) {
     return tokenSymbol.substr(1);
   } else if (tokenSymbol === "BTC.b") {
@@ -827,9 +828,11 @@ export function getNormalizedTokenSymbol(tokenSymbol) {
 const AVAILABLE_CHART_TOKENS = {
   [ARBITRUM]: ["ETH", "BTC", "LINK", "UNI"],
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
+  [KAVA_TESTNET]: ["WKAVA", "ETH", "BTC"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {
+  console.log('chart availability -----', chainId, '-----', tokenSymbol)
   const token = getTokenBySymbol(chainId, tokenSymbol);
   if (!token) return false;
   return (token.isStable || AVAILABLE_CHART_TOKENS[chainId]?.includes(getNormalizedTokenSymbol(tokenSymbol))) ?? false;

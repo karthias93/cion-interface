@@ -32,7 +32,7 @@ export function useLocalStorageByChainId<T>(
   } else {
     value = defaultValue;
   }
-
+  console.log(value, '-------value-------', defaultValue, '-----default----', internalValue)
   return [value, setValue];
 }
 

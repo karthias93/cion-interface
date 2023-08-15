@@ -178,6 +178,7 @@ export default function SwapBox(props) {
     "Short-Collateral-Address",
     getTokenBySymbol(chainId, defaultCollateralSymbol).address
   );
+  console.log('---initi short coll----', shortCollateralAddress)
   const isLong = swapOption === LONG;
   const isShort = swapOption === SHORT;
   const isSwap = swapOption === SWAP;
@@ -303,6 +304,7 @@ export default function SwapBox(props) {
   const fromToken = getToken(chainId, fromTokenAddress);
   const toToken = getToken(chainId, toTokenAddress);
   const shortCollateralToken = getTokenInfo(infoTokens, shortCollateralAddress);
+  console.log(shortCollateralToken, '-------shortCollateralToken-----', infoTokens, '-----info----', shortCollateralAddress)
 
   const fromTokenInfo = getTokenInfo(infoTokens, fromTokenAddress);
   const toTokenInfo = getTokenInfo(infoTokens, toTokenAddress);
@@ -468,6 +470,7 @@ export default function SwapBox(props) {
       const key = getPositionKey(account, stableToken.address, toTokenAddress, false, nativeTokenAddress);
       const position = positionsMap[key];
       if (position && position.size && position.size.gt(0)) {
+        console.log('------innnn--------',position.collateralToken.address)
         setShortCollateralAddress(position.collateralToken.address);
         return;
       }

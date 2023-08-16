@@ -33,7 +33,7 @@ export function useInfoTokens(
 
   const whitelistedTokens = getWhitelistedTokens(chainId);
   const whitelistedTokenAddresses = whitelistedTokens.map((token) => token.address);
-
+  console.log('vaultaddress: ', vaultAddress, '------position---', positionRouterAddress, '------native-----', nativeTokenAddress, '=====val-====', expandDecimals(1, 18),'-----white----', whitelistedTokenAddresses )
   const { data: vaultTokenInfo } = useSWR<BigNumber[], any>(
     [`useInfoTokens:${active}`, chainId, vaultReaderAddress, "getVaultTokenInfoV4"],
     {

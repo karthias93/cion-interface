@@ -437,7 +437,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "USD Coin",
       symbol: "USDC",
       decimals: 6,
-      address: "0x43D8814FdFB9B8854422Df13F1c66e34E4fa91fD",
+      address: "0x88c54f05AA59048051641AF8B2e95bC31Cb6501B",
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
@@ -816,6 +816,7 @@ export function getVisibleTokens(chainId: number) {
 }
 
 export function getNormalizedTokenSymbol(tokenSymbol) {
+  console.log(tokenSymbol, '------token symbol------')
   if (["WBTC", "WETH", "WAVAX"].includes(tokenSymbol)) {
     return tokenSymbol.substr(1);
   } else if (tokenSymbol === "BTC.b") {
@@ -827,9 +828,11 @@ export function getNormalizedTokenSymbol(tokenSymbol) {
 const AVAILABLE_CHART_TOKENS = {
   [ARBITRUM]: ["ETH", "BTC", "LINK", "UNI"],
   [AVALANCHE]: ["AVAX", "ETH", "BTC"],
+  [KAVA_TESTNET]: ["WKAVA", "ETH", "BTC"],
 };
 
 export function isChartAvailabeForToken(chainId: number, tokenSymbol: string) {
+  console.log('chart availability -----', chainId, '-----', tokenSymbol)
   const token = getTokenBySymbol(chainId, tokenSymbol);
   if (!token) return false;
   return (token.isStable || AVAILABLE_CHART_TOKENS[chainId]?.includes(getNormalizedTokenSymbol(tokenSymbol))) ?? false;

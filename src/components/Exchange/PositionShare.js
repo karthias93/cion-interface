@@ -6,7 +6,7 @@ import { RiFileDownloadLine } from "react-icons/ri";
 import { FiTwitter } from "react-icons/fi";
 import { useCopyToClipboard, useMedia } from "react-use";
 import Modal from "../Modal/Modal";
-import gmxLogo from "img/gmx-logo-with-name.svg";
+import gmxLogo from "img/c-logo.png";
 import "./PositionShare.css";
 import { QRCodeSVG } from "qrcode.react";
 import { getHomeUrl, getRootShareApiUrl, getTwitterIntentURL, USD_DECIMALS } from "lib/legacy";

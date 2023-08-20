@@ -32,7 +32,8 @@ export function useInfoTokens(
   const nativeTokenAddress = getContract(chainId, "NATIVE_TOKEN");
 
   const whitelistedTokens = getWhitelistedTokens(chainId);
-  const whitelistedTokenAddresses = whitelistedTokens.map((token) => token.address);
+  // const whitelistedTokenAddresses = whitelistedTokens.map((token) => token.address);
+  const whitelistedTokenAddresses = ['0xC61C6Aa8C8Ed17c15d80eD7C6e8E06e817daDb4d'];
   console.log('vaultaddress: ', vaultAddress, '------position---', positionRouterAddress, '------native-----', nativeTokenAddress, '=====val-====', expandDecimals(1, 18),'-----white----', whitelistedTokenAddresses )
   const { data: vaultTokenInfo } = useSWR<BigNumber[], any>(
     [`useInfoTokens:${active}`, chainId, vaultReaderAddress, "getVaultTokenInfoV4"],

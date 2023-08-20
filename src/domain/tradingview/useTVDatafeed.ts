@@ -92,6 +92,7 @@ export default function useTVDatafeed({ dataProvider }: Props) {
           setTimeout(() => callback(getConfigurationData(supportedResolutions)));
         },
         resolveSymbol(symbolName, onSymbolResolvedCallback) {
+          console.log(symbolName, '------symbol name------')
           if (!isChartAvailabeForToken(chainId, symbolName)) {
             symbolName = getNativeToken(chainId).symbol;
           }

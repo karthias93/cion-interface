@@ -52,7 +52,8 @@ import { useChainId } from "lib/chains";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import UsefulLinks from "components/Exchange/UsefulLinks";
 import { getLeverage, getLeverageStr } from "lib/positions/getLeverage";
-const { AddressZero } = ethers.constants;
+// const { AddressZero } = ethers.constants;
+const AddressZero = '0xC61C6Aa8C8Ed17c15d80eD7C6e8E06e817daDb4d';
 
 const PENDING_POSITION_VALID_DURATION = 600 * 1000;
 const UPDATED_POSITION_VALID_DURATION = 60 * 1000;
@@ -420,6 +421,7 @@ export const Exchange = forwardRef((props, ref) => {
     "Exchange-token-selection-v2",
     defaultTokenSelection
   );
+  console.log('token selection:', tokenSelection)
   const [swapOption, setSwapOption] = useLocalStorageByChainId(chainId, "Swap-option-v2", LONG);
 
   const fromTokenAddress = tokenSelection[swapOption].from;
